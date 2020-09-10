@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".activities.SubmitActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_marginStart="80dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:src="@drawable/gads_cuted" />
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:theme="@style/ToolbarTheme"
+                    app:titleTextColor="@android:color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/projet_submission"
+                android:textStyle="bold"
+                android:textColor="@color/secondaryColor"
+                android:textSize="25sp" />
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/secondaryColor"
+                android:alpha="0.5" />
+        </LinearLayout>
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_marginTop="40dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/edit_background"
+                        android:layout_height="60dp"
+                        android:hint="@string/first_name"
+                        android:padding="5dp"
+                        android:layout_margin="5dp"
+                        android:id="@+id/first_name" />
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/edit_background"
+                        android:layout_height="60dp"
+                        android:layout_margin="5dp"
+                        android:padding="5dp"
+                        android:hint="@string/last_name"
+                        android:id="@+id/last_name" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:background="@drawable/edit_background"
+                        android:layout_height="60dp"
+                        android:hint="@string/email_address"
+                        android:padding="5dp"
+                        android:inputType="textEmailAddress"
+                        android:layout_margin="5dp"
+                        android:id="@+id/email" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginBottom="80dp">
+                    <EditText
+                        android:layout_marginTop="20dp"
+                        android:layout_width="match_parent"
+                        android:background="@drawable/edit_background"
+                        android:layout_height="60dp"
+                        android:hint="@string/project_on_github_link"
+                        android:padding="5dp"
+                        android:layout_margin="5dp"
+                        android:id="@+id/github_link" />
+                </LinearLayout>
+
+
+                <Button
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/submit"
+                    android:textAllCaps="false"
+                    android:layout_gravity="center"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:background="@drawable/submit_btn"
+                    android:id="@+id/btn_submit" />
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+
+</LinearLayout>
