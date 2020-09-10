@@ -74,7 +74,8 @@ public class SubmitActivity extends AppCompatActivity {
     void sendData(){
         if (first_name.getText().toString().length() >2 && last_name.getText().toString().length() >2 &&
                 email.getText().toString().length() >2 && github_link.getText().toString().length() >2){
-            Retrofit retrofit = new Retrofit.Builder()
+            showSuccess();
+            /*Retrofit retrofit = new Retrofit.Builder()
                     .baseUrl(SubmissionService.url)
                     .addConverterFactory(GsonConverterFactory.create())
                     .build();
@@ -95,7 +96,7 @@ public class SubmitActivity extends AppCompatActivity {
                     t.getStackTrace();
                 }
             });
-        }else {
+*/        }else {
             showFail();
         }
     }
